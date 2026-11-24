@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra Clone - Fashion Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">MYNTRA</div>
+
+        <nav>
+            <a href="#men">MEN</a>
+            <a href="#women">WOMEN</a>
+            <a href="#kids">KIDS</a>
+            <a href="#home">HOME & LIVING</a>
+            <a href="#beauty">BEAUTY</a>
+        </nav>
+
+        <div class="search">
+            <input type="text" id="searchInput"
+                placeholder="Search for products, brands and more">
+            <button onclick="searchProducts()">Search</button>
+        </div>
+
+        <div class="icons">
+            <span>👤 Profile</span>
+
+            <span onclick="showWishlist()" style="cursor:pointer">
+                ♡ Wishlist (<span id="wishlistCount">0</span>)
+            </span>
+
+            <span onclick="showBag()" style="cursor:pointer">
+                🛍 Bag (<span id="bagCount">0</span>)
+            </span>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>FASHION THAT DEFINES YOU</h1>
+        <p>Discover the latest trends and styles</p>
+
+        <button onclick="document.getElementById('products').scrollIntoView()">
+            SHOP NOW
+        </button>
+    </section>
+
+    <section class="categories">
+        <h2>SHOP BY CATEGORY</h2>
+
+        <div class="category-list">
+            <div onclick="filterCategory('Women')">👗 Women</div>
+            <div onclick="filterCategory('Men')">👔 Men</div>
+            <div onclick="filterCategory('Footwear')">👟 Footwear</div>
+            <div onclick="filterCategory('Accessories')">👜 Accessories</div>
+            <div onclick="filterCategory('All')">✨ All Products</div>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+        <h2>🔥 TRENDING PRODUCTS</h2>
+        <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <footer>
+        <h3>MYNTRA CLONE</h3>
+        <p>Fashion is not just about clothes. It's about confidence.</p>
+        <p>Student Project | HTML, CSS & JavaScript</p>
+        <p>© 2026 Myntra Clone</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
